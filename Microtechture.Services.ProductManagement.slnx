@@ -1,0 +1,15 @@
+<Solution>
+  <Folder Name="/Items/">
+    <File Path="README.md" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="ProductManagement.Application/ProductManagement.Application.csproj" Id="25ab0816-e8f2-4f8e-92da-5d8afedcac1c" />
+    <Project Path="ProductManagement.Domain/ProductManagement.Domain.csproj" />
+    <Project Path="ProductManagement.Infrastructure/ProductManagement.Infrastructure.csproj" Id="10726d79-9efb-475f-8507-04053521c8a0" />
+  </Folder>
+  <Folder Name="/Test/">
+    <Project Path="ProductManagement.Test/ProductManagement.Test.csproj" Id="0f10544c-437b-4879-9b92-e779045ad4f9" />
+  </Folder>
+  <Project Path="ProductManagement.Api/ProductManagement.Api.csproj" Id="b5af3423-38bd-4c59-a413-1c212b4008e8" />
+  <Project Path="ProductManagement.Worker/ProductManagement.Worker.csproj" Id="8579a3f5-9034-41dd-b228-496e518f879f" />
+</Solution>
