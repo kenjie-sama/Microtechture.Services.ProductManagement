@@ -1,4 +1,4 @@
-﻿namespace ProductManage.Presentation.Extensions.App
+﻿namespace ProductManage.Api.Extensions.App
 {
     public static class MiddlewareConfigExtension
     {

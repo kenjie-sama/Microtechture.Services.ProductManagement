@@ -1,0 +1,10 @@
+@ProductManage.Api_HostAddress = https://localhost:7137
+###
+
+GET {{ProductManage.Api_HostAddress}}/api/test
+
+###
+
+GET {{ProductManage.Api_HostAddress}}/api/test
+
+###

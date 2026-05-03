@@ -2,6 +2,10 @@
   <Folder Name="/Items/">
     <File Path="README.md" />
   </Folder>
+  <Folder Name="/Presenter/">
+    <Project Path="ProductManage.Presentation/ProductManage.Api.csproj" Id="ea803d8c-8637-49de-8a48-84d64829a622" />
+    <Project Path="ProductManagement.Worker/ProductManagement.Worker.csproj" />
+  </Folder>
   <Folder Name="/src/">
     <Project Path="ProductManagement.Application/ProductManagement.Application.csproj" />
     <Project Path="ProductManagement.Domain/ProductManagement.Domain.csproj" />
@@ -10,6 +14,4 @@
   <Folder Name="/Test/">
     <Project Path="ProductManagement.Test/ProductManagement.Test.csproj" />
   </Folder>
-  <Project Path="ProductManage.Presentation/ProductManage.Presentation.csproj" Id="ea803d8c-8637-49de-8a48-84d64829a622" />
-  <Project Path="ProductManagement.Worker/ProductManagement.Worker.csproj" />
 </Solution>

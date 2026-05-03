@@ -1,4 +1,4 @@
-﻿namespace ProductManage.Presentation.Extensions.Program
+﻿namespace ProductManage.Api.Extensions.Program
 {
     public static class CustomServicesExtension
     {

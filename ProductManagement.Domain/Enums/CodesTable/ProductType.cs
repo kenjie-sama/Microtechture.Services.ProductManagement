@@ -8,5 +8,10 @@ namespace ProductManagement.Domain.Enums.CodesTable
     {
         Software,
         Hardware,
+        Plasticware,
+        Chemical,
+        Food,
+        Beverage,
+        Electronics
     }
 }

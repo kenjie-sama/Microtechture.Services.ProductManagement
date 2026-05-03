@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ProductManagement.Infrastructure.Contexts;
 
-namespace ProductManage.Presentation.Extensions.Program
+namespace ProductManage.Api.Extensions.Program
 {
     public static class SqlConfigExtension
     {
