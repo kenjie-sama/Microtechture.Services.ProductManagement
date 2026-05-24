@@ -1,4 +1,4 @@
-﻿using ProductManagement.Domain.Models.Interfaces;
+﻿using ProductManagement.Domain.Interfaces.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;

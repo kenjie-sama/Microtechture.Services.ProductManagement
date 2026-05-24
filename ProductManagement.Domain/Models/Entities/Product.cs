@@ -14,7 +14,12 @@ namespace ProductManagement.Domain.Models.Entities
         [Required] public double Price { get; private set; }
         [Required] public Guid ProductTypeId { get; private set; }
 
-        public Product(string name, string description, double price, Guid productTypeId, string createdBy)
+        public Product(
+            string name, 
+            string description,
+            double price,
+            Guid productTypeId,
+            string createdBy)
         {
             Name = name;
             Description = description;

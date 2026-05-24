@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ProductManagement.Domain.Models.Interfaces
+namespace ProductManagement.Domain.Interfaces.Models
 {
     public interface IBaseEntity<TId> where TId : struct
     {

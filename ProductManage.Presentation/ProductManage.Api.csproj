@@ -29,7 +29,5 @@
 		<ProjectReference Include="..\ProductManagement.Application\ProductManagement.Application.csproj" />
 		<ProjectReference Include="..\ProductManagement.Domain\ProductManagement.Domain.csproj" />
 		<ProjectReference Include="..\ProductManagement.Infrastructure\ProductManagement.Infrastructure.csproj" />
-		<ProjectReference Include="..\ProductManagement.Test\ProductManagement.Test.csproj" />
-		<ProjectReference Include="..\ProductManagement.Worker\ProductManagement.Worker.csproj" />
 	</ItemGroup>
 </Project>

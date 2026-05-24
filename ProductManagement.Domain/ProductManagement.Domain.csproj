@@ -8,9 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Models\Complex\" />
-    <Folder Include="Models\Dtos\" />
     <Folder Include="Constants\" />
+    <Folder Include="Models\Complex\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Microtechture.Common\Microtechture.Common.csproj" />
   </ItemGroup>
 
 </Project>

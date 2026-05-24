@@ -2,6 +2,9 @@
   <Folder Name="/Items/">
     <File Path="README.md" />
   </Folder>
+  <Folder Name="/Libraries/">
+    <Project Path="Microtechture.Common/Microtechture.Common.csproj" Id="704ba892-6c80-49af-bac8-bc9e2fadc465" />
+  </Folder>
   <Folder Name="/Presenter/">
     <Project Path="ProductManage.Presentation/ProductManage.Api.csproj" Id="ea803d8c-8637-49de-8a48-84d64829a622" />
     <Project Path="ProductManagement.Worker/ProductManagement.Worker.csproj" />
