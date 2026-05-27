@@ -26,15 +26,15 @@ namespace ProductManagement.Application.Services.Implementations
             return await _productsRepository.DeactivateByIdAsync(id);
         }
 
-        public Task<IEnumerable<ProductDetailDto>> GetAllAsync()
+        public async Task<IEnumerable<ProductDetailDto>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            var products = await _productsRepository.GetAllAsync();
+            return products.Select(ProductMapper.ToProductDetail);
         }
 
         public async Task<ProductDetailDto> GetByIdAsync(Guid id)
         {
             var data = await _productsRepository.GetByIdAsync(id);
-
             return ProductMapper.ToProductDetail(data);
         }
     }
