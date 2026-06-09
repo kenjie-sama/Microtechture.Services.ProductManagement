@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ProductManagement.Infrastructure.Contexts;
 
-namespace ProductManage.Api.Extensions.Program
+namespace ProductManagement.Api.Extensions.Program
 {
     public static class SqlConfigExtension
     {
@@ -12,6 +12,7 @@ namespace ProductManage.Api.Extensions.Program
                 options.UseSqlServer(
                     builder.Configuration.GetConnectionString("ProductManagementDbContext"),
                     x => x.MigrationsAssembly("ProductManagement.Infrastructure"));
+                options.UseAsyncSeeding(options.UseDatabaseSeederAsync);
             });
 
         }

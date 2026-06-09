@@ -31,7 +31,7 @@ namespace ProductManagement.Infrastructure.Contexts
                         t.HasPeriodStart("ValidFrom");
                         t.HasPeriodEnd("ValidTo");
                     }));
-            });
+            }); 
         }
     }
 }

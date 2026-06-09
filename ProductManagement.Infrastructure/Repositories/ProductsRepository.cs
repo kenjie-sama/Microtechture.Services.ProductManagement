@@ -11,24 +11,24 @@ namespace ProductManagement.Infrastructure.Repositories
 {
     public class ProductsRepository : IProductsRepository
     {
-        private readonly ProductManagementDbContext _productManagementDbContext;
+        private readonly ProductManagementDbContext _dbContext;
         private Entity<Product> _products;
 
         public ProductsRepository(ProductManagementDbContext productManagementDbContext)
         {
-            _productManagementDbContext = productManagementDbContext;
+            _dbContext = productManagementDbContext;
             Initialize();
         }
 
         private void Initialize()
         {
-            _products = new Entity<Product>(_productManagementDbContext.Products);
+            _products = new Entity<Product>(_dbContext.Products);
         }
 
         public async Task<TaskResult> CreateAsync(Product data)
         {
-            await _productManagementDbContext.AddAsync(data);
-            var resultId = await _productManagementDbContext.SaveChangesAsync();
+            await _dbContext.AddAsync(data);
+            var resultId = await _dbContext.SaveChangesAsync();
 
             return TaskResult.GetResult(resultId, Messages.Create.Product.Success, Messages.Create.Product.Failed);
         }

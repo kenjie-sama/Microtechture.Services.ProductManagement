@@ -1,4 +1,6 @@
-﻿namespace ProductManage.Api.Extensions.App
+﻿using Scalar.AspNetCore;
+
+namespace ProductManagement.Api.Extensions.App
 {
     public static class MiddlewareConfigExtension
     {
@@ -8,6 +10,7 @@
             if (app.Environment.IsDevelopment())
             {
                 app.MapOpenApi();
+                app.MapScalarApiReference();
             }
 
             app.UseHttpsRedirection();

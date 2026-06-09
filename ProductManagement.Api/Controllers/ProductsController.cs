@@ -3,9 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 using ProductManagement.Application.Models.Dtos;
 using ProductManagement.Application.Services.Interfaces;
 
-namespace ProductManage.Api.Controllers
+namespace ProductManagement.Api.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/products")]
     [ApiController]
     public class ProductsController : ControllerBase
     {

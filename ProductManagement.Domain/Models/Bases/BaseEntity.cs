@@ -13,6 +13,6 @@ namespace ProductManagement.Domain.Models.Bases
     /// <typeparam name="TId">Provide the ID Type GUID, Integer, Long, Short, String</typeparam>
     public class BaseEntity<TId> : IBaseEntity<TId> where TId : struct
     {
-        public TId Id { get; }
+        public TId Id { get; set; }
     }
 }

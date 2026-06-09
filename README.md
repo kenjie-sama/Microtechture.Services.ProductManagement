@@ -4,4 +4,4 @@ USE THIS Command to
 
 	Add-Migration InitDb ` -Project ProductManagement.Infrastructure ` -StartupProject ProductManagement.Api ` -Context ProductManagementDbContext
 ** update db
-	Update-Database ` -Project ProductManagement.Infrastructure ` -StartupProject ProductManagement.Api ` -Context ProductManagementDbContextzz
+	Update-Database ` -Project ProductManagement.Infrastructure ` -StartupProject ProductManagement.Api ` -Context ProductManagementDbContext

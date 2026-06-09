@@ -8,3 +8,12 @@ GET {{ProductManage.Api_HostAddress}}/api/test
 GET {{ProductManage.Api_HostAddress}}/api/test
 
 ###
+
+POST {{ProductManage.Api_HostAddress}}/api/Products
+Content-Type: application/json
+
+{
+  "name" : ""
+}
+
+###

@@ -1,4 +1,4 @@
-﻿namespace ProductManage.Api.Extensions.Program
+﻿namespace ProductManagement.Api.Extensions.Program
 {
     public static class EndpointConfigExtension
     {

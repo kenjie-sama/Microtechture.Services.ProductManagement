@@ -1,7 +1,7 @@
-using ProductManage.Api.Extensions.App;
-using ProductManage.Api.Extensions.Program;
+using ProductManagement.Api.Extensions.App;
+using ProductManagement.Api.Extensions.Program;
 
-namespace ProductManage.Api
+namespace ProductManagement.Api
 {
     public class Program
     {
