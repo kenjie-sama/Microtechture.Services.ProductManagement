@@ -15,7 +15,6 @@
 
   <ItemGroup>
 	<ProjectReference Include="..\ProductManagement.Domain\ProductManagement.Domain.csproj" />
-	<ProjectReference Include="..\Microtechture.Common\Microtechture.Common.csproj" />
   </ItemGroup>
 
 </Project>

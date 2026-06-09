@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ProductManagement.Infrastructure.Contexts;
+using ProductManagement.Infrastructure.Seeders;
 
 namespace ProductManagement.Api.Extensions.Program
 {
@@ -12,9 +13,36 @@ namespace ProductManagement.Api.Extensions.Program
                 options.UseSqlServer(
                     builder.Configuration.GetConnectionString("ProductManagementDbContext"),
                     x => x.MigrationsAssembly("ProductManagement.Infrastructure"));
-                options.UseAsyncSeeding(options.UseDatabaseSeederAsync);
+                options.UseSeeding(UseDatabaseSeeder);
+                //options.UseAsyncSeeding(async (x,y,z) => await UseDatabaseSeederAsync(x, y, z));
             });
 
+        }
+
+        private static async Task UseDatabaseSeederAsync(
+            DbContext context,
+            bool hasSchema,
+            CancellationToken cancellationToken)
+        {
+            var dbContext = (ProductManagementDbContext)context;
+
+            // Seed roles with GUIDs
+            await ProductTypeSeeder.RunAsync(dbContext);
+
+            await dbContext.SaveChangesAsync();
+        }
+
+
+        private static void UseDatabaseSeeder(
+            DbContext context,
+            bool hasSchema)
+        {
+            var dbContext = (ProductManagementDbContext)context;
+
+            // Seed roles with GUIDs
+            ProductTypeSeeder.Run(dbContext);
+
+            dbContext.SaveChanges();
         }
     }
 }

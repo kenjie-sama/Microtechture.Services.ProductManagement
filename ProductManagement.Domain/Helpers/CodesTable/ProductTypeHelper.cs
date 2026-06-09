@@ -18,8 +18,8 @@ namespace ProductManagement.Domain.Helpers.CodesTable
             return new CT.ProductType()
             {
                 Id = id ?? Guid.NewGuid(),
-                Code = typeCode.ToString(),
-                Title = Security.Sanitize(title ?? nameof(typeCode)),
+                Code = ((short)typeCode).ToString(),
+                Title = Security.Sanitize(title ?? typeCode.ToString()),
                 Description = Security.Sanitize(description),
                 Priority = 0,
                 CreatedBy = creator,
