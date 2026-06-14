@@ -25,27 +25,27 @@ namespace ProductManagement.Infrastructure.Seeders
         public static async Task RunAsync(ProductManagementDbContext dbContext)
         {
             var existings = dbContext.ProductTypes.ToList();
-            var unMatchData = Linq.UnmatchedOnSource(data, existings, d => d.Code).ToList();
+            var unmatchData = Linq.TakeSourceUnmatch(data, existings, d => d.Code).ToList();
 
-            if (!unMatchData.Any())
+            if (!unmatchData.Any())
             {
                 return;
             }
 
-            await dbContext.AddRangeAsync(unMatchData);
+            await dbContext.AddRangeAsync(unmatchData);
         }
 
         public static void Run(ProductManagementDbContext dbContext)
         {
             var existings = dbContext.ProductTypes.ToList();
-            var unMatchData = Linq.UnmatchedOnSource(data, existings, d => d.Code).ToList();
+            var unmatchData = Linq.TakeSourceUnmatch(data, existings, d => d.Code).ToList();
 
-            if (!unMatchData.Any())
+            if (!unmatchData.Any())
             {
                 return;
             }
 
-            dbContext.AddRange(unMatchData);
+            dbContext.AddRange(unmatchData);
         }
     }
 }

@@ -6,9 +6,9 @@ namespace Microtechture.Common.Utils
 {
     public class Linq
     {
-        public static IEnumerable<T> UnmatchedOnSource<T, K>(IEnumerable<T> source, IEnumerable<T> target, Func<T, K> keySelector) where T : class
+        public static IEnumerable<TEntity> TakeSourceUnmatch<TEntity, TKey>(IEnumerable<TEntity> source, IEnumerable<TEntity> target, Func<TEntity, TKey> keySelector) where TEntity : class
         {
-            var excludedKeys = new HashSet<K>(target.Select(keySelector));
+            var excludedKeys = new HashSet<TKey>(target.Select(keySelector));
 
             return source.Where(a => !excludedKeys.Contains(keySelector(a)));
         }
