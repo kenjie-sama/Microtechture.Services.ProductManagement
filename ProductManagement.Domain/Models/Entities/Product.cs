@@ -27,6 +27,9 @@ namespace ProductManagement.Domain.Models.Entities
             ProductTypeId = productTypeId;
             
             CreatedBy = createdBy;
+            ModifiedBy = createdBy;
+            DateTimeModified = DateTime.Now;
+            IsActive = true;
         }
     }
 }

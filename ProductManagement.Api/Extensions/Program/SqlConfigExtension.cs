@@ -14,7 +14,7 @@ namespace ProductManagement.Api.Extensions.Program
                     builder.Configuration.GetConnectionString("ProductManagementDbContext"),
                     x => x.MigrationsAssembly("ProductManagement.Infrastructure"));
                 options.UseSeeding(UseDatabaseSeeder);
-                //options.UseAsyncSeeding(async (x,y,z) => await UseDatabaseSeederAsync(x, y, z));
+                options.UseAsyncSeeding(async (x, y, z) => await UseDatabaseSeederAsync(x, y, z));
             });
 
         }
