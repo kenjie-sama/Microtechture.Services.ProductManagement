@@ -9,8 +9,17 @@ namespace ProductManagement.Api.Extensions.Program
     {
         public static void AddCustomServicesConfigs(this WebApplicationBuilder builder)
         {
+            AddServices(builder);
+            AddRepositories(builder);
+        }
+
+        private static void AddServices(this WebApplicationBuilder builder)
+        {
             builder.Services.AddScoped<IProductService, ProductService>();
-            
+        }
+
+        private static void AddRepositories(this WebApplicationBuilder builder)
+        {
             builder.Services.AddScoped<IProductsRepository, ProductsRepository>();
         }
     }
